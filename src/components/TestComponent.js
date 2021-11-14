@@ -10,7 +10,6 @@ const TestComponent = () =>{
         'warning',
         'info',
         'light',
-        'dark',
       ];
     return(
         <Accordion defaultActiveKey="0">
