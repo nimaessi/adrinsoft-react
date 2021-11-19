@@ -1,5 +1,5 @@
 import { Navbar , Form , FormControl , Button , Nav , Container } from 'react-bootstrap';
-
+import caveat from '../fonts.module.css';
 const NavBar = () => {
     const myStyle = {
         opacity: 1,
@@ -7,8 +7,8 @@ const NavBar = () => {
  
     return(
     <Navbar className="border-1 border-bottom border-light" bg="dark" variant="dark" expand="lg" style={myStyle}>
-    <Container fluid>
-        <Navbar.Brand href="#">Adrinsoft</Navbar.Brand>
+    <Container fluid className={caveat.roboRegular} >
+        <Navbar.Brand className={caveat.caveatb} href="#">Adrinsoft</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
         <Nav

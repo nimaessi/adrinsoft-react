@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Caveat-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/Caveat-Bold.ttf');
+}
+@font-face {
+    font-family: 'Caveat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/Caveat-Regular.ttf');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/Roboto-Regular.ttf');
+}
+.caveatb{
+    font-family: Caveat-Bold;
+}
+.roboRegular{
+    font-family: Roboto-Regular;
+}

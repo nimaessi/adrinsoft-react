@@ -1,5 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import caveat from '../fonts.module.css';
+
 
 export default function MyCarousel(){
 
@@ -25,7 +27,7 @@ export default function MyCarousel(){
 
     ];
     return(
-    <Carousel>
+    <Carousel className={caveat.roboRegular}>
         {items.map((item) =>(
          <Carousel.Item key={item.id}>
             <img

@@ -6,7 +6,6 @@ import MainComponent from './components/MainComponent';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 
-
 function App() {
   return (
     <>
