@@ -2,7 +2,7 @@ import * as Icon from 'react-bootstrap-icons';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
-
+import caveat from '../fonts.module.css';
 
 const ContactUs = () =>{
 

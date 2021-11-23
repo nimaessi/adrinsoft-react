@@ -1,4 +1,6 @@
 import { Navbar , Form , FormControl , Button , Nav , Container } from 'react-bootstrap';
+import * as Icon from 'react-bootstrap-icons';
+
 import caveat from '../fonts.module.css';
 const NavBar = () => {
     const myStyle = {
@@ -16,11 +18,9 @@ const NavBar = () => {
             style={{ maxHeight: '400px' }}
             navbarScroll
         >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <Nav.Link href="#" disabled>
-            Link
-            </Nav.Link>
+            <Nav.Link href="#action1"><Icon.PersonFill className="m-1"/>About us</Nav.Link>
+            <Nav.Link href="#action2"><Icon.EnvelopeFill className="m-1"/>Contact us</Nav.Link>
+            <Nav.Link href="#action2"><Icon.Code className="m-1"/>QR code</Nav.Link>
         </Nav>
         <Form className="d-flex">
             <FormControl
