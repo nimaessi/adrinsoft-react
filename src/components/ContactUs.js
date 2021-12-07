@@ -2,12 +2,12 @@ import * as Icon from 'react-bootstrap-icons';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
-import caveat from '../fonts.module.css';
+
 
 const ContactUs = () =>{
 
     return(
-        <div className="container-fluid mt-5 bg-light">
+        <div className="container-fluid mt-5 bg-light" id="contactUs">
                 <h2 className="text-dark text-center mt-5">CONTACT</h2>
                 <p className="text-dark text-center">
                     <Icon.EnvelopeFill className="m-2"/>
