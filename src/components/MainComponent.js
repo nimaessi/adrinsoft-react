@@ -90,7 +90,7 @@ const MainComponent = () => {
         </div>
             <br/><br/><br/><br/>
         </div>
-        <div className="row">
+        <div className="row" id="my-team">
             <hr className="bg-danger mt-3 border-2 border-top border-light w-75 mx-auto"/>
             <h1 className="text-center text-light">THE TEAM</h1>
             <p className="text-center text-light">The ones who runs this company</p>

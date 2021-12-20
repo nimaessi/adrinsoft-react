@@ -19,18 +19,27 @@ const NavBar = () => {
             style={{ maxHeight: '400px' }}
             navbarScroll
         >
-            <Nav.Link href="#action1"><Icon.PersonFill className="m-1"/>About us</Nav.Link>
-            <Link
-                activeClass="active"
-                to="contactUs"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration= {600}
-            >About us</Link>
-            <Nav.Link href="#action2"
-            data-to-scrollspy-id="contactUs">
-                <Icon.EnvelopeFill className="m-1"/>Contact us</Nav.Link>
+            <Nav.Link href="#action1"><Icon.PersonFill className="m-1"/>
+                <Link
+                    activeClass="active"
+                    to="my-team"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration= {600}
+                >About us</Link>
+            </Nav.Link>
+            <Nav.Link href="#action2">
+                <Icon.EnvelopeFill className="m-1"/>
+                <Link
+                    activeClass="active"
+                    to="contactUs"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration= {600}
+                >Contact us</Link>
+            </Nav.Link>
             <Nav.Link href="#action2"><Icon.Code className="m-1"/>QR code</Nav.Link>
         </Nav>
         <Form className="d-flex">
