@@ -17,11 +17,11 @@ const ContactUs = () =>{
                     <div className="col-md-3">
                         <p className="text-dark fs-6">
                             <Icon.GeoAlt className="m-2"/>
-                            Chicago, US
+                            Teh, IR
                         </p>
                         <p className="text-dark fs-6">
                             <Icon.PhoneFill className="m-2"/>
-                            6161616161
+                            +989213364274
                         </p>
                         <p className="text-dark fs-6">
                         <Icon.EnvelopeFill className="m-2"/>

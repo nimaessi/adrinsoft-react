@@ -1,6 +1,6 @@
 import { Navbar , Form , FormControl , Button , Nav , Container } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
-
+import { Link } from "react-scroll";
 
 import caveat from '../fonts.module.css';
 const NavBar = () => {
@@ -20,6 +20,14 @@ const NavBar = () => {
             navbarScroll
         >
             <Nav.Link href="#action1"><Icon.PersonFill className="m-1"/>About us</Nav.Link>
+            <Link
+                activeClass="active"
+                to="contactUs"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration= {600}
+            >About us</Link>
             <Nav.Link href="#action2"
             data-to-scrollspy-id="contactUs">
                 <Icon.EnvelopeFill className="m-1"/>Contact us</Nav.Link>
