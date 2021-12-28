@@ -1,4 +1,4 @@
-import { Navbar , Form , FormControl , Button , Nav , Container } from 'react-bootstrap';
+import { Navbar , Nav , Container } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
 import { Link } from "react-scroll";
 
@@ -42,15 +42,6 @@ const NavBar = () => {
             </Nav.Link>
             <Nav.Link href="#action2"><Icon.Code className="m-1"/>QR code</Nav.Link>
         </Nav>
-        <Form className="d-flex">
-            <FormControl
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-        </Form>
         </Navbar.Collapse>
     </Container>
     </Navbar>

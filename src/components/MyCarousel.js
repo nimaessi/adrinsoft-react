@@ -31,7 +31,7 @@ export default function MyCarousel(){
         {items.map((item) =>(
          <Carousel.Item key={item.id}>
             <img
-            style={{height:"70vh"}}
+            style={{height:"50vh"}}
             className="d-block w-100"
             src={item.img}
             alt="First slide"
