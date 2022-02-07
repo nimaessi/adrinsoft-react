@@ -11,7 +11,9 @@ const NavBar = () => {
     return(
     <Navbar className="border-1 border-bottom border-light" bg="dark" variant="dark" expand="lg" style={myStyle}>
     <Container fluid className={caveat.roboRegular} >
-        <Navbar.Brand className={caveat.caveatb} href="#">Adrinsoft</Navbar.Brand>
+        <Navbar.Brand className={caveat.caveatb}>
+            Adrinsoft
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
         <Nav
