@@ -81,8 +81,8 @@ const MainComponent = () => {
                 <li className="list-inline-item text-light fs-6">android /</li>
                 <li className="list-inline-item text-light fs-6">web</li>
             </ul>
-            <div className="d-grid gap-2 w-25 mx-auto">
-                <Button variant="danger" size="sm">
+            <div className="d-grid gap-2 mx-auto">
+                <Button variant="danger" className="w-50 mx-auto" size="sm">
                     View our work
                 </Button>
             </div>
