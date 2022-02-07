@@ -8,6 +8,7 @@ const ContactUs = () =>{
 
     return(
         <div className="container-fluid mt-5 bg-light" id="contactUs">
+            <br/>
                 <h2 className="text-dark text-center mt-5">CONTACT</h2>
                 <p className="text-dark text-center">
                     <Icon.EnvelopeFill className="m-2"/>
@@ -25,7 +26,7 @@ const ContactUs = () =>{
                         </p>
                         <p className="text-dark fs-6">
                         <Icon.EnvelopeFill className="m-2"/>
-                        adri-nweb@outlook.com
+                        adrin-web@outlook.com
                         </p>
                     </div>
                     <div className="col-md-9">
