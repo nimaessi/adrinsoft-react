@@ -20,7 +20,7 @@ export default function MyCarousel(){
         },
         {
             id:3,
-            img:"/assets/myImages/bg3.jpg",
+            img:"/assets/myImages/ferenc.jpg",
             description:"Keys allow React to 1"
 
         }
