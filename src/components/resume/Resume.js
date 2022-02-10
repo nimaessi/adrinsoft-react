@@ -1,4 +1,7 @@
 import Header from "./Header";
+import Project from "./Project";
+import Skill from "./Skill";
+
 
 const Resume = () => {
 
@@ -6,6 +9,8 @@ const Resume = () => {
     <>
         <div className="resume">
             <Header/>
+            <Project/>
+            <Skill/>
         </div>
     </>
     )
