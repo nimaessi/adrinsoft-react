@@ -17,7 +17,6 @@ const Skill = () => {
                <Badge bg="warning mt-2  ms-2">Material</Badge>
 
             </h3>
-
         </div>
     )
 }

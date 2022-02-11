@@ -1,3 +1,4 @@
+import Contact from "./Contact";
 import Header from "./Header";
 import Project from "./Project";
 import Skill from "./Skill";
@@ -11,6 +12,7 @@ const Resume = () => {
             <Header/>
             <Project/>
             <Skill/>
+            <Contact/>
         </div>
     </>
     )
