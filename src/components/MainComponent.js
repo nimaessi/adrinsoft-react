@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button'
 import * as Icon from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 const MainComponent = () => {
 
     const items =[
@@ -146,9 +147,14 @@ const MyAvatar = (props) =>{
                     {props.item.description}
                     </Card.Text>
                     <div className="d-grid gap-2 w-25 mx-auto">
-                        <Button variant="danger" size="sm">
-                            Profile
-                        </Button>
+                        <Link 
+                        to="/resume" 
+                        className="btn btn-danger" 
+                        role="button" 
+                        variant="danger" 
+                        size="sm">
+                                Profile
+                        </Link>
                     </div>
                     </Card.Body>
                 </Card>

@@ -24,7 +24,7 @@ const Project = () =>{
     ]
 
     return(
-        <div className="container-fluid mt-5 p-0 text-center overflow-hidden">
+        <div id="my-projects" className="container-fluid mt-5 p-0 text-center overflow-hidden">
              <h1 className="display-5 fw-bolder text-light text-center mt-2">
                 PROJECTS
              </h1>

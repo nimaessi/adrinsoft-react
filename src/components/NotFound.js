@@ -1,5 +1,5 @@
 import Image from 'react-bootstrap/Image'; 
-import Glitch from '../mycss/glitch.css';
+import { Link } from 'react-router-dom';
 
 const NotFound = () => {
 
@@ -12,10 +12,12 @@ const NotFound = () => {
     return(
         <div className="d-flex align-items-center justify-content-center vh-100 overflow-hidden">
             <div className="row">
+            <Link className="text-light" to="/">
                 <Image 
                 style={imgStyle}
                 src="/assets/myImages/logo_transparent.png"
                 className="fluid mt-5"/>
+            </Link>
             </div>
             <div className="row">
                 <h1 className="text-light fw-bolder m-3">404</h1>

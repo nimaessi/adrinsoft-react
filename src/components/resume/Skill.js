@@ -3,7 +3,7 @@ import Badge from 'react-bootstrap/Badge';
 const Skill = () => {
 
     return(
-        <div className="container-fluid mt-5 p-0 text-center overflow-hidden">
+        <div id="my-skills" className="container-fluid mt-5 p-0 text-center overflow-hidden">
             <h2 className="text-light fw-bolder">Skills</h2>
             <h3 className="text-danger">
                <Badge bg="secondary mt-5">Javascript</Badge>
