@@ -11,7 +11,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="resume" element={<Resume />} />
+      <Route path="resume/user" element={<Resume />}>
+      <Route path=":userId" element={<Resume />} />
+      </Route>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
   </BrowserRouter>

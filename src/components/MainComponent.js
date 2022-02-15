@@ -35,21 +35,24 @@ const MainComponent = () => {
             img:"../img/team2.jpg",
             name:"nima",
             title:"CEO & Founder",
-            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales"
+            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales",
+            link : "resume/user/1"
         },
         {
             id:2,
             img:"",
             name:"omid",
             title:"Designer",
-            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales"
+            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales",
+            link : "resume/user/2"
         },
         {
             id:3,
             img:"",
             name:"Naser",
             title:"Art Director",
-            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales"
+            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales",
+            link : "resume/user/3"
         },
     ];
 
@@ -148,7 +151,8 @@ const MyAvatar = (props) =>{
                     </Card.Text>
                     <div className="d-grid gap-2 w-25 mx-auto">
                         <Link 
-                        to="/resume" 
+                        to={props.item.link}
+                        key={props.item.id} 
                         className="btn btn-danger" 
                         role="button" 
                         variant="danger" 
