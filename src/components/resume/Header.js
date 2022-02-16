@@ -1,19 +1,13 @@
 import Button from 'react-bootstrap/Button';
 import * as Icon from 'react-bootstrap-icons';
 import Image from 'react-bootstrap/Image';
-import { useParams } from "react-router-dom";
-import data from './dataProfile.js';
 
-const Header = () => {
+const Header = (props) => {
     const imgStyle = {
         maxHeight : "320px",
         maxWidth : "320px",
 
     };
-    let params = useParams();
-    //let user = getUser(parseInt(params.userId,1));
-    //let users = getUsers();
-    console.log(getUsers());
 
     return(
         <div className="container-fluid p-0 text-center overflow-auto">
@@ -23,13 +17,13 @@ const Header = () => {
             src="../../assets/myImages/developer.png" 
             alt="Developer"/>
             <h1 className="display-5 fw-bolder text-light text-center mt-2">Hi, I am 
-                <span className="text-danger ms-2">nima ess</span>
+                <span className="text-danger ms-2">{props.user.name}</span>
             </h1>
-            <h5 className="text-center text-light mt-3">A Front End Designer.</h5>
-            <p className="text-center text-light mt-5 w-50 mx-auto">Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.</p>
+            <h5 className="text-center text-light mt-3">{props.user.role}</h5>
+            <p className="text-center text-light mt-5 w-50 mx-auto">{props.user.description}</p>
             <Button variant="outline-primary">Resume</Button>
             <a 
-            href="http://www.adrinsoft.ir" 
+            href={props.user.github}
             target="_blank"
             rel="noopener noreferrer">
                 <Icon.Github 
@@ -37,7 +31,7 @@ const Header = () => {
                 size="35"/>
              </a>
             <a 
-            href="http://www.adrinsoft.ir" 
+            href={props.user.linkedin}
             target="_blank"
             rel="noopener noreferrer">
                 <Icon.Linkedin 
