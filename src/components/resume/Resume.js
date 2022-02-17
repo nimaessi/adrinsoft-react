@@ -5,6 +5,7 @@ import Project from "./Project";
 import Skill from "./Skill";
 import { useParams } from "react-router-dom";
 import data from './dataProfile.json';
+import NotFound from "../NotFound";
 
 const Resume = () => {
 
@@ -13,17 +14,21 @@ const Resume = () => {
     const loadData = [...data];
     const user = loadData[userId];
 
-    return(
-    <>
-        <div className="resume">
-            <NavResume/>
-            <Header user={user}/>
-            <Project projects={user.projects}/>
-            <Skill skills={user.skills}/>
-            <Contact contact={user}/>
-        </div>
-    </>
-    )
+    try{
+        return(
+            <>
+                <div className="resume">
+                    <NavResume/>
+                    <Header user={user}/>
+                    <Project projects={user.projects}/>
+                    <Skill skills={user.skills}/>
+                    <Contact contact={user}/>
+                </div>
+            </>
+            )
 
+    } catch(e){
+        return(<NotFound/>)
+    }
 }
 export default Resume;
