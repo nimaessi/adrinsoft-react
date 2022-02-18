@@ -1,8 +1,8 @@
 import { Navbar , Nav , Container } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
 import { Link } from "react-scroll";
-
 import caveat from '../fonts.module.css';
+
 const NavBar = () => {
     const myStyle = {
         opacity: 1,
@@ -21,7 +21,7 @@ const NavBar = () => {
             style={{ maxHeight: '400px' }}
             navbarScroll
         >
-            <Nav.Link href="#action1"><Icon.PersonFill className="m-1"/>
+            <Nav.Link><Icon.PersonFill className="m-1"/>
                 <Link
                     activeClass="active"
                     to="my-team"
@@ -31,7 +31,7 @@ const NavBar = () => {
                     duration= {600}
                 >About us</Link>
             </Nav.Link>
-            <Nav.Link href="#action2">
+            <Nav.Link>
                 <Icon.EnvelopeFill className="m-1"/>
                 <Link
                     activeClass="active"
@@ -42,7 +42,7 @@ const NavBar = () => {
                     duration= {600}
                 >Contact us</Link>
             </Nav.Link>
-            <Nav.Link href="#action2"><Icon.Code className="m-1"/>QR code</Nav.Link>
+            <Nav.Link><Icon.Code className="m-1"/>QR code</Nav.Link>
         </Nav>
         </Navbar.Collapse>
     </Container>
