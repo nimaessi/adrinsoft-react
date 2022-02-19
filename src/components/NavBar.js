@@ -1,9 +1,18 @@
 import { Navbar , Nav , Container } from 'react-bootstrap';
+import { useState } from 'react';
 import * as Icon from 'react-bootstrap-icons';
 import { Link } from "react-scroll";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import caveat from '../fonts.module.css';
+import QrCode from './QrCode';
 
 const NavBar = () => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
     const myStyle = {
         opacity: 1,
     };
@@ -42,10 +51,26 @@ const NavBar = () => {
                     duration= {600}
                 >Contact us</Link>
             </Nav.Link>
-            <Nav.Link><Icon.Code className="m-1"/>QR code</Nav.Link>
+            <Nav.Link role="button" onClick={handleShow}>
+                <Icon.Code className="m-1"/>
+                QR code
+                
+               
+            </Nav.Link>
         </Nav>
         </Navbar.Collapse>
     </Container>
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+                <Modal.Title>Create QrCode</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                    Close
+                </Button>
+            </Modal.Footer>
+        </Modal>
     </Navbar>
     );
 }

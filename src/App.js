@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Resume from './components/resume/Resume';
 import NotFound from './components/NotFound';
 
-
 function App() {
   return (
     <BrowserRouter>
