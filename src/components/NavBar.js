@@ -5,13 +5,26 @@ import { Link } from "react-scroll";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import caveat from '../fonts.module.css';
+import Form from 'react-bootstrap/Form';
 import QrCode from './QrCode';
 
 const NavBar = () => {
+
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+    const [inputs, setInputs] = useState({});
 
+    const handleChange = (event) =>{
+        event.preventDefault();
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
+    }
+
+    const handleSubmit = () =>{
+
+    }
 
     const myStyle = {
         opacity: 1,
@@ -64,11 +77,29 @@ const NavBar = () => {
             <Modal.Header closeButton>
                 <Modal.Title>Create QrCode</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>
+                {inputs.data !=null ?
+                <QrCode text={inputs.data}/>:""
+                }
+                <form onSubmit={handleSubmit}>
+                    <Form.Floating className="mb-3">
+                        <Form.Control
+                        name="data"
+                        type="text"
+                        value={inputs.data || null} 
+                        onChange={handleChange}
+                        placeholder="Text"
+                        />
+                        <label htmlFor="floatingInputCustom">Text</label>
+                    </Form.Floating>
+                    <div className="d-grid gap-2 mx-auto">
+                        <Button variant="danger" size="sm" type="submit">
+                            Send
+                        </Button>
+                    </div>  
+                </form>
+            </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
             </Modal.Footer>
         </Modal>
     </Navbar>

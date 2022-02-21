@@ -1,21 +1,32 @@
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React from 'react';
+import { useQRCode } from 'next-qrcode';
 
 
-const QrCode = () => {
+const QrCode = (props) => {
 
-    return(
-        <Modal>
-            <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary">
-                    Close
-                </Button>
-            </Modal.Footer>
-      </Modal>
+    const { Image } = useQRCode();
+
+    try{
+      return(
+        <Image
+        text={props.text}
+        options={{
+          type: 'image/jpeg',
+          quality: 0.3,
+          level: 'M',
+          margin: 3,
+          scale: 4,
+          width: 200,
+          color: {
+            dark: '#010599FF',
+            light: '#FFBF60FF',
+          },
+        }}
+      />
     )
+
+    }catch(e){
+      return null;
+    }
 }
 export default QrCode;
