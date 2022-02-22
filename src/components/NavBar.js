@@ -2,7 +2,6 @@ import { Navbar , Nav , Container } from 'react-bootstrap';
 import { useState } from 'react';
 import * as Icon from 'react-bootstrap-icons';
 import { Link } from "react-scroll";
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import caveat from '../fonts.module.css';
 import Form from 'react-bootstrap/Form';
@@ -21,11 +20,6 @@ const NavBar = () => {
         const value = event.target.value;
         setInputs(values => ({...values, [name]: value}))
     }
-
-    const handleSubmit = () =>{
-
-    }
-
     const myStyle = {
         opacity: 1,
     };
@@ -78,10 +72,10 @@ const NavBar = () => {
                 <Modal.Title>Create QrCode</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {inputs.data !=null ?
+                {inputs.data !=null && inputs.data.length>0 ?
                 <QrCode text={inputs.data}/>:""
                 }
-                <form onSubmit={handleSubmit}>
+                <form>
                     <Form.Floating className="mb-3">
                         <Form.Control
                         name="data"
@@ -92,11 +86,6 @@ const NavBar = () => {
                         />
                         <label htmlFor="floatingInputCustom">Text</label>
                     </Form.Floating>
-                    <div className="d-grid gap-2 mx-auto">
-                        <Button variant="danger" size="sm" type="submit">
-                            Send
-                        </Button>
-                    </div>  
                 </form>
             </Modal.Body>
             <Modal.Footer>
