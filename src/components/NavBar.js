@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import caveat from '../fonts.module.css';
 import Form from 'react-bootstrap/Form';
 import QrCode from './QrCode';
+import { useEffect } from 'react';
 
 const NavBar = () => {
 

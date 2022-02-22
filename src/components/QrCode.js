@@ -1,15 +1,14 @@
 import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
-
 const QrCode = (props) => {
 
     const { Image } = useQRCode();
-
     try{
       return(
         <div className="text-center m-3">
           <Image
+            id="my-qr"
             text={props.text}
             options={{
               type: 'image/jpeg',
