@@ -2,9 +2,46 @@ import * as Icon from 'react-bootstrap-icons';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
+import Swal from 'sweetalert2';
+import axios from 'axios';
+
 
 
 const ContactUs = () =>{
+
+    const [contact, setContact] = useState({});
+
+    const handleForm = (event) =>{
+        event.preventDefault();
+        const name = event.target.name;
+        const value = event.target.value;
+        setContact(values => ({...values, [name]: value}))
+        axios.get('https://jsonplaceholder.typicode.com/comments/500')
+        .then(function (response) {
+            // handle success
+            console.log(response);
+            Swal.fire({
+                title: 'success!',
+                text: contact.comment,
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+            Swal.fire({
+                title: 'Error!',
+                text: 'Do you want to continue',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+        })
+        .then(function () {
+            // always executed
+        });
+    }
 
     return(
         <div className="container-fluid mt-5 bg-light" id="contactUs">
@@ -30,34 +67,37 @@ const ContactUs = () =>{
                         </p>
                     </div>
                     <div className="col-md-9">
-                   
-                        <Form.Floating className="mb-3">
-                            <Form.Control
-                            id="floatingInputCustom"
-                            type="email"
-                            placeholder="name@example.com"
-                            />
-                            <label htmlFor="floatingInputCustom">Email address</label>
-                        </Form.Floating>
-                        <Form.Floating>
-                            <Form.Control
-                            id="floatingPasswordCustom"
-                            type="text"
-                            placeholder="Subject"
-                            />
-                            <label htmlFor="floatingPasswordCustom">Subject</label>
-                        </Form.Floating>
-                        <Form.Floating className="mt-3">
-                            <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                        <form onSubmit={handleForm}>
+                            <Form.Floating className="mb-3">
                                 <Form.Control
-                                as="textarea"
-                                placeholder="Leave a comment here"
-                                style={{ height: '100px' }}
+                                id="floatingInputCustom"
+                                type="email"
+                                name="email"
+                                placeholder="name@example.com"
                                 />
-                            </FloatingLabel>
-                        </Form.Floating>
-                        <Button className="mt-3 btn btn-danger mb-4" type="submit"><Icon.EnvelopeFill className="m-2"/>Send Message</Button>
-
+                                <label htmlFor="floatingInputCustom">Email address</label>
+                            </Form.Floating>
+                            <Form.Floating>
+                                <Form.Control
+                                id="floatingPasswordCustom"
+                                type="text"
+                                name="subject"
+                                placeholder="Subject"
+                                />
+                                <label htmlFor="floatingPasswordCustom">Subject</label>
+                            </Form.Floating>
+                            <Form.Floating className="mt-3">
+                                <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                                    <Form.Control
+                                    as="textarea"
+                                    name="comment"
+                                    placeholder="Leave a comment here"
+                                    style={{ height: '100px' }}
+                                    />
+                                </FloatingLabel>
+                            </Form.Floating>
+                            <Button className="mt-3 btn btn-danger mb-4" type="submit"><Icon.EnvelopeFill className="m-2"/>Send Message</Button>
+                        </form>
                     </div>
                 </div>
         </div>
