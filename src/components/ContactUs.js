@@ -2,7 +2,7 @@ import * as Icon from 'react-bootstrap-icons';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 import Swal from 'sweetalert2';
 import axios from 'axios';
 
@@ -11,37 +11,45 @@ import axios from 'axios';
 const ContactUs = () =>{
 
     const [contact, setContact] = useState({});
+    // Initializing didMount as false
+    const [didMount, setDidMount] = useState(false)
+    // Setting didMount to true upon mounting
+    useEffect(() => { setDidMount(true) }, []);
 
     const handleForm = (event) =>{
         event.preventDefault();
         const name = event.target.name;
         const value = event.target.value;
         setContact(values => ({...values, [name]: value}))
-        axios.get('https://jsonplaceholder.typicode.com/comments/500')
-        .then(function (response) {
-            // handle success
-            console.log(response);
-            Swal.fire({
-                title: 'success!',
-                text: contact.comment,
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              })
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-            Swal.fire({
-                title: 'Error!',
-                text: 'Do you want to continue',
-                icon: 'error',
-                confirmButtonText: 'Cool'
-              })
-        })
-        .then(function () {
-            // always executed
-        });
     }
+    useEffect(() => {
+        if (didMount)
+            axios.get('https://jsonplaceholder.typicode.com/comments/500')
+            .then(function (response) {
+                // handle success
+                console.log(response);
+                Swal.fire({
+                    title: 'success!',
+                    text: contact.email,
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Do you want to continue',
+                    icon: 'error',
+                    confirmButtonText: 'Cool'
+                })
+            })
+            .then(function () {
+                // always executed
+            });
+      }, [contact]); // <- add the count variable here
+    
 
     return(
         <div className="container-fluid mt-5 bg-light" id="contactUs">
@@ -70,6 +78,7 @@ const ContactUs = () =>{
                         <form onSubmit={handleForm}>
                             <Form.Floating className="mb-3">
                                 <Form.Control
+                                required
                                 id="floatingInputCustom"
                                 type="email"
                                 name="email"
@@ -79,6 +88,7 @@ const ContactUs = () =>{
                             </Form.Floating>
                             <Form.Floating>
                                 <Form.Control
+                                required
                                 id="floatingPasswordCustom"
                                 type="text"
                                 name="subject"
@@ -89,6 +99,7 @@ const ContactUs = () =>{
                             <Form.Floating className="mt-3">
                                 <FloatingLabel controlId="floatingTextarea2" label="Comments">
                                     <Form.Control
+                                    required
                                     as="textarea"
                                     name="comment"
                                     placeholder="Leave a comment here"
