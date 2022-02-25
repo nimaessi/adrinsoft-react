@@ -11,7 +11,6 @@ import axios from 'axios';
 const ContactUs = () =>{
 
     const [contact, setContact] = useState({});
-    // Initializing didMount as false
     const [didMount, setDidMount] = useState(false)
     // Setting didMount to true upon mounting
     useEffect(() => { setDidMount(true) }, []);

@@ -37,7 +37,13 @@ const NavBar = () => {
             style={{ maxHeight: '400px' }}
             navbarScroll
         >
-            <Nav.Link><Icon.PersonFill className="m-1"/>
+            <Nav.Link
+             activeClass="active"
+             to="my-team"
+             spy={true}
+             smooth={true}
+             offset={-70}
+             duration= {600}><Icon.PersonFill className="m-1"/>
                 <Link
                     activeClass="active"
                     to="my-team"
