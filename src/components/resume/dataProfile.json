@@ -2,13 +2,13 @@
   {
     "id": 1,
     "name": "Nima Esfahani",
-    "role": "CEO & Founder",
+    "role": "Full stack developer",
     "description": "Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.",
     "resume": "https://example.com/xx.pdf",
     "linkedin": "https://linkedin.com",
-    "github": "https://github.com",
-    "email": "johnsmith@mail.com",
-    "mobile": "+989192117951",
+    "github": "https://github.com/nimaessi",
+    "email": "nimaesfahani92@gmail.com",
+    "mobile": "+989213364274",
     "projects": [
       {
         "id" : 1,
@@ -30,15 +30,13 @@
       "HTML",
       "CSS",
       "JavaScript",
-      "TypeScript",
+      "Laravel",
+      "Android-java",
+      "Bootstrap",
+      "Sql",
       "React",
-      "Redux",
-      "SASS",
-      "Material UI",
       "Git",
-      "CI/CD",
-      "Jest",
-      "Enzyme"
+      "Php"
     ]
   },
   {
