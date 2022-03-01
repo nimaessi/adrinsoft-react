@@ -3,27 +3,27 @@
     "id": 1,
     "name": "Nima Esfahani",
     "role": "Full stack developer",
-    "description": "Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.",
+    "description": "Ability to work individually and team work. / Responsible and Punctual / Ability to solve problems in an efficient manner / Self-motivated and love to learn / Ability to analyze Database System",
     "resume": "https://example.com/xx.pdf",
-    "linkedin": "https://linkedin.com",
+    "linkedin": "https://www.linkedin.com/in/nima-esfahani-1988829a/",
     "github": "https://github.com/nimaessi",
     "email": "nimaesfahani92@gmail.com",
     "mobile": "+989213364274",
     "projects": [
       {
         "id" : 1,
-        "name": "Project 1a",
-        "description": "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam"
+        "name": "Divan app",
+        "description": "An Android application containing poems by Iranian poets"
       },
       {
         "id" : 2,
-        "name": "Project 2",
-        "description": "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam"
+        "name": "Cinemaart",
+        "description": "Cinema Art Website Reference Download Persian subtitles for movies and cinema news"
       },
       {
         "id" : 3,
-        "name": "Project 3",
-        "description": "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam"
+        "name": "Saloonet",
+        "description": "Android application and website for online hairdressing"
       }
     ],
     "skills": [
@@ -41,44 +41,47 @@
   },
   {
     "id": 2,
-    "name": "omid dadvar",
-    "role": "Information Technology Engineer",
-    "description": "Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.",
+    "name": "Omid Dadvar",
+    "role": "Full Stack Developer",
+    "description": "Ability to work individually and team work. / Responsible and Punctual/Ability to solve problems in an efficient manner / Self-motivated and love to learn / Ability to work on Desktop C#/VB.Net Application (WPF, WinForm) / Ability to analyze Database System",
     "resume": "https://example.com/xx.pdf",
-    "linkedin": "https://linkedin.com",
-    "github": "https://github.com",
-    "email": "johnsmith@mail.com",
-    "mobile": "+989213364274",
+    "linkedin": "https://www.linkedin.com/in/omid-dadvar-0963a488/",
+    "github": "https://github.com/omid-94",
+    "email": "omiddadvar94@gmail.com",
+    "mobile": "+989398359847",
     "projects": [
       {
         "id" : 1,
-        "name": "Project 1",
-        "description": "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam"
+        "name": "Divan app",
+        "description": "An Android application containing poems by Iranian poets"
       },
       {
         "id" : 2,
-        "name": "Project 2",
-        "description": "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam"
+        "name": "Cinemaart",
+        "description": "Cinema Art Website Reference Download Persian subtitles for movies and cinema news"
       },
       {
         "id" : 3,
-        "name": "Project 3",
-        "description": "Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam"
+        "name": "Saloonet",
+        "description": "Android application and website for online hairdressing"
       }
     ],
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Redux",
-      "SASS",
-      "Material UI",
-      "Git",
-      "CI/CD",
-      "Jest",
-      "Enzyme"
+      "Javascript",
+      "React Js",
+      "React Native",
+      "C#.Net",
+      "VB.Net",
+      "ASP.Net",
+      "Java Android",
+      "JavaFx",
+      "PHP",
+      "Laravel",
+      "WinServer 2019",
+      "Ubuntu 20",
+      "Win 10"
     ]
   }
 ]
