@@ -2,7 +2,7 @@ import * as Icon from 'react-bootstrap-icons';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Swal from 'sweetalert2';
 import axios from 'axios';
 
@@ -11,45 +11,33 @@ import axios from 'axios';
 const ContactUs = () =>{
 
     const [contact, setContact] = useState({});
-    const [didMount, setDidMount] = useState(false);
-    
-    useEffect(() => { setDidMount(true) }, []);
-
-    const handleForm = (event) =>{
-        event.preventDefault();
+ 
+    const handleChange = (event) =>{
         const name = event.target.name;
         const value = event.target.value;
-        setContact(values => ({...values, [name]: value}))
+        setContact(values => ({...values, [name]: value}));
     }
-    useEffect(() => {
-        if (didMount)
-            axios.get('https://jsonplaceholder.typicode.com/comments/500')
-            .then(function (response) {
-                // handle success
-                console.log(response);
-                Swal.fire({
-                    title: 'success!',
-                    text: contact.email,
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-                Swal.fire({
-                    title: 'Error!',
-                    text: 'Do you want to continue',
-                    icon: 'error',
-                    confirmButtonText: 'Cool'
-                })
-            })
-            .then(function () {
-                // always executed
-            });
-      }, [contact]); // <- add the count variable here
-    
-
+    const handleForm = (event) => {
+        event.preventDefault();
+        axios.post('http://127.0.0.1:8000/api/contactus', contact)
+        .then(function (response) {
+          Swal.fire({
+              title: 'success!',
+              text: contact.email,
+              icon: 'success',
+              confirmButtonText: 'Ok'
+          })
+        })
+        .catch(function (error) {
+          Swal.fire({
+              title: 'Error!',
+              text: 'Do you want to continue',
+              icon: 'error',
+              confirmButtonText: 'Ok'
+          })
+        });
+      }
+  
     return(
         <div className="container-fluid mt-5 bg-light" id="contactUs">
             <br/>
@@ -81,7 +69,9 @@ const ContactUs = () =>{
                                 id="floatingInputCustom"
                                 type="email"
                                 name="email"
+                                value={contact.email || ""} 
                                 placeholder="name@example.com"
+                                onChange={handleChange}
                                 />
                                 <label htmlFor="floatingInputCustom">Email address</label>
                             </Form.Floating>
@@ -92,6 +82,8 @@ const ContactUs = () =>{
                                 type="text"
                                 name="subject"
                                 placeholder="Subject"
+                                value={contact.subject || ""}
+                                onChange={handleChange}
                                 />
                                 <label htmlFor="floatingPasswordCustom">Subject</label>
                             </Form.Floating>
@@ -101,8 +93,10 @@ const ContactUs = () =>{
                                     required
                                     as="textarea"
                                     name="comment"
+                                    value={contact.comment || ""}
                                     placeholder="Leave a comment here"
                                     style={{ height: '100px' }}
+                                    onChange={handleChange}
                                     />
                                 </FloatingLabel>
                             </Form.Floating>
