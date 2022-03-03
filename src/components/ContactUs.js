@@ -11,8 +11,8 @@ import axios from 'axios';
 const ContactUs = () =>{
 
     const [contact, setContact] = useState({});
-    const [didMount, setDidMount] = useState(false)
-    // Setting didMount to true upon mounting
+    const [didMount, setDidMount] = useState(false);
+    
     useEffect(() => { setDidMount(true) }, []);
 
     const handleForm = (event) =>{
