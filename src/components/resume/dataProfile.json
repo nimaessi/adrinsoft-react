@@ -26,6 +26,8 @@
         "description": "Android application and website for online hairdressing"
       }
     ],
+    "education": null,
+    "employment" : null,
     "skills": [
       "HTML",
       "CSS",
@@ -64,6 +66,99 @@
         "id" : 3,
         "name": "Saloonet",
         "description": "Android application and website for online hairdressing"
+      }
+    ],
+    "education" : [
+      {
+        "order" : 1,
+        "university" : "University of Tehran",
+        "dicipline" : "Pure mathematics",
+        "date" : "Sep 2016 to Sep 2019"
+      },
+      {
+        "order" : 2,
+        "university" : "AmirKabir University of Technology",
+        "dicipline" : "Mathematics and applications",
+        "date" : "Sep 2011 to Jan 2016"
+      }
+    ],
+    "employment" : [
+      {
+        "order" : 1,
+        "company" : "Tazarv Afzar Software Company",
+        "linkedin" : "linkedin.com/company/tazarv-afzar-co-",
+        "role" : "C#.Net Developer , SQL Developer , React , Java (Android)",
+        "date" : "Feb 2021 to Now",
+        "responsibilities" : [
+          "Working on Desktop C#/VB.Net Application (Winform, WPF)",
+          "Building RestAPI services with C#ASP.Net",
+          "Building required Stored Procedures, Functions, etc",
+          "Analyzing DataBase System",
+          "Building webapps with React Js",
+          "Building native apps with React Native",
+          "Creating Java libraries for natIve apps",
+          "Working with reporting tools (Crystal Report, Stimulsoft)"
+        ]
+      },
+      {
+        "order" : 2,
+        "company" : "Edalatkhane",
+        "linkedin" : "linkedin.com/company/edalatkhane",
+        "role" : "PHP (Laravel) Developer , ReactJs Developer",
+        "date" : "June 2020 to Jan 2021",
+        "responsibilities" : [
+          "Rebuilt a PHP project with Laravel",
+          "Helped on FrontEnd (React)",
+          "Analyzed System (DB and Business logic)",
+          "Wrote Python scripts for data parsing"
+        ]
+      },
+      {
+        "order" : 3,
+        "company" : "Sajayanegar",
+        "linkedin" : "linkedin.com/company/sajayanegar",
+        "role" : "JavaFx Developer",
+        "date" : "Aug 2019 to May 2020",
+        "responsibilities" : [
+          "Rebuilt a JavaFx hardware bridge app for lab equipments",
+          "Helped on FrontEnd (JQuery)",
+          "Built Web pages with Moqui (Java Framework)"
+        ]
+      },
+      {
+        "order" : 4,
+        "company" : "Jahanro Industrial Company",
+        "linkedin" : null,
+        "role" : "After Sales Service",
+        "date" : "Sep 2018 to July 2019",
+        "responsibilities" : [
+          "Identified and assessed customers' needs",
+          "Met personal/team sales targets",
+          "Informed customer of deals and promotions",
+          "Handled changes in policies or renewals"
+        ]
+      },
+      {
+        "order" : 5,
+        "company" : "Pipex (Polyethylene Parto Pipe Company)",
+        "linkedin" : null,
+        "role" : "Sales Executive",
+        "date" : "Oct 2017 to Aug 2018",
+        "responsibilities" : [
+          "Organized sales visits",
+          "Demonstrated and presented products",
+          "Negotiated contracts and packages"
+        ]
+      },
+      {
+        "order" : 6,
+        "company" : "IranMehr Language Institute",
+        "linkedin" : null,
+        "role" : "English Teacher",
+        "date" : "Sep 2016 to Sep 2017",
+        "responsibilities" : [
+          "Teaching 'American English Files' Books"
+        ]
       }
     ],
     "skills": [

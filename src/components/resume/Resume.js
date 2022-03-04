@@ -6,6 +6,7 @@ import Skill from "./Skill";
 import { useParams } from "react-router-dom";
 import data from './dataProfile.json';
 import NotFound from "../NotFound";
+import MyTabs from "./MyTabs";
 
 const Resume = () => {
 
@@ -22,6 +23,7 @@ const Resume = () => {
                     <Header user={user}/>
                     <Project projects={user.projects}/>
                     <Skill skills={user.skills}/>
+                    <MyTabs educations={user.education} employments={user.employment}/>
                     <Contact contact={user}/>
                 </div>
             </>
