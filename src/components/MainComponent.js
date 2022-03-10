@@ -5,56 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import * as Icon from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
-const MainComponent = () => {
+import exportedObject from './content';
 
-    const items =[
-        {
-            id:1,
-            title:"Web & Application Development",
-            description:"We develop award-winning websites and mobile applications built to deliver value and results."
-        },
-        {
-            id:2,
-            title:"Experience Design",
-            description:"Our award-winning UX designers create visually impressive and functional online experiences that are designed with your audience in mind."
-        },
-        {
-            id:3,
-            title:"Client Services",
-            description:"We work with you to maintain your site after it launches, with dedicated support to make sure your business goals are being met."
-        },
-        {
-            id:4,
-            title:"Technology Training",
-            description:"Take advantage of the latest technology. Our team of experts will give you the skills you need to succeed with Sitefinity, SmartBear, Microsoft Azure, and more."
-        },
-    ];
-    const teams =[
-        {
-            id:1,
-            img:"../img/team2.jpg",
-            name:"nima",
-            title:"CEO & Founder",
-            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales",
-            link : "resume/user/1"
-        },
-        {
-            id:2,
-            img:"",
-            name:"omid",
-            title:"Designer",
-            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales",
-            link : "resume/user/2"
-        },
-        {
-            id:3,
-            img:"",
-            name:"Naser",
-            title:"Art Director",
-            description:"Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales",
-            link : "resume/user/3"
-        },
-    ];
+const MainComponent = () => {
 
     return(
     <div className="container-fluid bg-dark">
@@ -63,7 +16,7 @@ const MainComponent = () => {
         <div className="row">
         <Row xs={1} md={4} className="g-2">
             {
-            items.map((item) => (
+            exportedObject.items.map((item) => (
                 <MyCard key={item.id} item={item}/>
             ))}
         </Row>
@@ -98,9 +51,9 @@ const MainComponent = () => {
             <hr className="bg-danger mt-3 border-2 border-top border-light w-75 mx-auto"/>
             <h1 className="text-center text-light">THE TEAM</h1>
             <p className="text-center text-light">The ones who runs this company</p>
-            <Row xs={1} md={3} className="g-3">
+            <Row xs={1} md={exportedObject.teams.length} className="g-3">
             {
-            teams.map((team) => (
+            exportedObject.teams.map((team) => (
                 <MyAvatar key={team.id} item={team}/>
             ))}
             </Row>
@@ -146,7 +99,7 @@ const MyAvatar = (props) =>{
                         {props.item.name}
                         <p className="fs-6 mt-3">{props.item.title}</p>
                     </Card.Title>
-                    <Card.Text>
+                    <Card.Text className="fw-bold">
                     {props.item.description}
                     </Card.Text>
                     <div className="d-grid gap-2 w-25 mx-auto">

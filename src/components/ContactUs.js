@@ -31,7 +31,7 @@ const ContactUs = () =>{
         .catch(function (error) {
           Swal.fire({
               title: 'Error!',
-              text: 'Do you want to continue',
+              text: 'Messages not send',
               icon: 'error',
               confirmButtonText: 'Ok'
           })

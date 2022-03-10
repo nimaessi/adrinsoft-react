@@ -4,11 +4,11 @@ import Button from 'react-bootstrap/Button';
 import * as Icon from 'react-bootstrap-icons';
 
 const QrCode = (props) => {
-    const rf = useRef()
+    const rf = useRef();
     const { Image } = useQRCode();
     const MyClick = () => {
       const data = rf.current.childNodes[0].getAttribute('src');
-      rf.current.childNodes[0].style.display = 'none'
+      rf.current.childNodes[0].style.display = 'none';
       var oImg = document.createElement("img");
       oImg.setAttribute('src', data);
       oImg.setAttribute('alt', 'na');
