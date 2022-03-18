@@ -5,12 +5,15 @@ import Button from 'react-bootstrap/Button';
 import { useState } from "react";
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import Spinner from 'react-bootstrap/Spinner';
+import Modal from 'react-bootstrap/Modal';
 
 
 
 const ContactUs = () =>{
 
     const [contact, setContact] = useState({});
+    const [loading, setLoading] = useState(false);
  
     const handleChange = (event) =>{
         const name = event.target.name;
@@ -19,7 +22,8 @@ const ContactUs = () =>{
     }
     const handleForm = (event) => {
         event.preventDefault();
-        axios.post('http://127.0.0.1:8000/api/contactus', contact)
+        setLoading(true);
+        axios.post('http://136.243.201.75/laravel/api/addComment', contact)
         .then(function (response) {
           Swal.fire({
               title: 'success!',
@@ -35,12 +39,15 @@ const ContactUs = () =>{
               icon: 'error',
               confirmButtonText: 'Ok'
           })
+        })
+        .finally(() => {
+            setLoading(false);
         });
       }
   
     return(
         <div className="container-fluid mt-5 bg-light" id="contactUs">
-            <br/>
+            <br/>{loading ?? <IsLoading/>}
                 <h2 className="text-dark text-center mt-5">CONTACT</h2>
                 <p className="text-dark text-center">
                     <Icon.EnvelopeFill className="m-2"/>
@@ -68,8 +75,8 @@ const ContactUs = () =>{
                                 required
                                 id="floatingInputCustom"
                                 type="email"
-                                name="email"
-                                value={contact.email || ""} 
+                                name="Email"
+                                value={contact.Email || ""} 
                                 placeholder="name@example.com"
                                 onChange={handleChange}
                                 />
@@ -80,9 +87,9 @@ const ContactUs = () =>{
                                 required
                                 id="floatingPasswordCustom"
                                 type="text"
-                                name="subject"
+                                name="Title"
                                 placeholder="Subject"
-                                value={contact.subject || ""}
+                                value={contact.Title || ""}
                                 onChange={handleChange}
                                 />
                                 <label htmlFor="floatingPasswordCustom">Subject</label>
@@ -92,8 +99,8 @@ const ContactUs = () =>{
                                     <Form.Control
                                     required
                                     as="textarea"
-                                    name="comment"
-                                    value={contact.comment || ""}
+                                    name="Comment"
+                                    value={contact.Comment || ""}
                                     placeholder="Leave a comment here"
                                     style={{ height: '100px' }}
                                     onChange={handleChange}
@@ -107,5 +114,19 @@ const ContactUs = () =>{
         </div>
     )
 
+}
+const IsLoading = () =>{
+
+    return(
+        <Modal.Dialog>
+            <Modal.Body>
+                <Spinner animation="border" variant="danger" />
+                <p>Please Wait ...</p>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary">Close</Button>
+            </Modal.Footer>
+        </Modal.Dialog>
+    )
 }
 export default ContactUs;
