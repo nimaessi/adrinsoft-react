@@ -8,8 +8,6 @@ import axios from 'axios';
 import Spinner from 'react-bootstrap/Spinner';
 import Modal from 'react-bootstrap/Modal';
 
-
-
 const ContactUs = () =>{
 
     const [contact, setContact] = useState({});
@@ -47,7 +45,7 @@ const ContactUs = () =>{
   
     return(
         <div className="container-fluid mt-5 bg-light" id="contactUs">
-            <br/>{loading ?? <IsLoading/>}
+            <br/>
                 <h2 className="text-dark text-center mt-5">CONTACT</h2>
                 <p className="text-dark text-center">
                     <Icon.EnvelopeFill className="m-2"/>
@@ -111,22 +109,21 @@ const ContactUs = () =>{
                         </form>
                     </div>
                 </div>
+
+            <Modal show={loading} onHide={() => setLoading(false)}>
+                <Modal.Body className="text-center">
+                    <p className="text-center">Please Wait ...</p>
+                    <Spinner animation="border" variant="danger" />
+                </Modal.Body>
+                <Modal.Footer>
+                <Button variant="secondary" onClick={() => setLoading(false)}>
+                    Close
+                </Button>
+                </Modal.Footer>
+            </Modal>        
         </div>
     )
 
 }
-const IsLoading = () =>{
 
-    return(
-        <Modal.Dialog>
-            <Modal.Body>
-                <Spinner animation="border" variant="danger" />
-                <p>Please Wait ...</p>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button variant="secondary">Close</Button>
-            </Modal.Footer>
-        </Modal.Dialog>
-    )
-}
 export default ContactUs;
